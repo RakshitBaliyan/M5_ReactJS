@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My React App</title>
+  <!-- React and ReactDOM from CDN -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <!-- Babel for JSX -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <!-- Your React code -->
+  <script type="text/babel">
+    // Your React code will go here
+
+    // Define a simple React component
+    function App() {
+        const heading = {
+            color: "black",
+            fontWeight: "600"
+        };
+        const allComp={
+            color: "#474747",
+            marginBottom: "1rem",
+            lineHeight: "1.5rem",
+            margin: "0.5rem auto",
+            padding: "1rem",
+            maxWidth: "700px",
+            fontFamily: "Verdana"
+        };
+        const anchorTag={
+            color: "#00b2f1",
+            textDecoration: "none",
+        };
+      return (
+        <div style={allComp}>
+            <h1 style={heading}>Learn web development</h1>
+            <div>
+                <p>Welcome to the MDN learning area. This set of articles aims to guide complete beginners to web development with all that they need to start coding websites.</p>
+            </div>
+            <div>
+                <p>The aim of this area of MDN is not to take you from "beginner" to "expert" but to take you from "beginner" to "comfortable". From there, you should be able to start making your way, learning from <a style={anchorTag} href="#">the rest of MDN</a>, and other intermediate to advanced resources that assume a lot of previous knowledge.</p>
+            </div>
+            <div>
+                <p>If you are a complete beginner, web development can be challenging - we will hold your hand and provide enough detail for you to feel comfortable and learn the topics properly. You should feel at home whether you are a student learning web development (on your own or as part of a class), a teacher looking for class materials, a hobbyist, or someone who just wants to understand more about how web technologies work.</p>
+            </div>
+        </div>
+      );
+    }
+
+    // Render the component to the DOM
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
+</body>
+</html>
